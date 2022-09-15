@@ -29,7 +29,7 @@ function Create() {
       <div className="card-body">
          <div>
           <div className="mb-3">
-            <label className="form-label">Gyvuno rūšis</label>
+            <label className="form-label">Gyvūno rūšis</label>
             <select className="form-select" value={type} onChange={e => setType(e.target.value)}>
               <option value={0} disabled>
                 Pasirinkite iš sąrašo
@@ -40,7 +40,7 @@ function Create() {
             </select>
           </div>
           <div className="mb-3">
-            <label className="form-label">Įrašykite svorį</label>
+            <label className="form-label">Įrašykite svorį (kg)</label>
             <input type="text" className="form-control" value={weight} onChange={e => setWeight(e.target.value)}/>
           </div>
           <button  type="button" onClick={add} className="btn btn-outline-success">Pridėti</button>

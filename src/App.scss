@@ -3,35 +3,28 @@
 body,
 html {
   font-family: "Arima", cursive;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Saira Semi Condensed", sans-serif;
   background-color: lightgreen;
 }
 
-.movie {
+.animal {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   &_content {
-    display: flex;
-    &_title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-    &__genre {
+    display: block;
+    &_type {
       font-size: 20px;
       letter-spacing: 1px;
       margin-right: 10px;
     }
-    &__year {
+    &_weight {
       font-size: 20px;
-      color: skyblue;
+      color: rgb(22, 224, 49);
       margin-right: 10px;
     }
   }
-  &__buttons {
+  &_buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -40,6 +33,7 @@ html {
     }
   }
 }
+
 
 .modal {
   display: block;

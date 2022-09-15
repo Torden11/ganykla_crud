@@ -6,14 +6,14 @@ function List() {
 
    const { animals } = useContext(DataContext);
 
-   return (
+   return ( 
       
          <div className="card m-4">
-           <h5 className="card-header">Gyvunų sąrašas</h5>
+           <h5 className="card-header">Gyvūnų sąrašas</h5>
            <div className="card-body">
             <ul className="list-group">
                {
-                  movies?.map(m => <Line key={m.id} movie={m}/>)
+                  animals?.map(a => <Line key={a.id} animal={a}/>)
                }
             </ul>
             </div>
