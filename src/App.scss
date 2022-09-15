@@ -1,0 +1,57 @@
+@import "~bootstrap/scss/bootstrap";
+
+body,
+html {
+  font-family: "Arima", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Saira Semi Condensed", sans-serif;
+  background-color: lightgreen;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &_content {
+    display: flex;
+    &_title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    &__genre {
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+    &__year {
+      font-size: 20px;
+      color: skyblue;
+      margin-right: 10px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+      margin-left: 5px;
+    }
+  }
+}
+
+.modal {
+  display: block;
+  background-color: #0000005f;
+}
+
+.msg-bin {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  .toast {
+    display: block;
+    margin: 10px;
+  }
+}
