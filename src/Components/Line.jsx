@@ -1,12 +1,12 @@
-// import { useContext } from "react";
+import { useContext } from "react";
 import types from "../Data/types";
-// import DataContext from "./DataContext";
+import DataContext from "./DataContext";
 
 
 
 function Line({ animal }) {
 
-//   const { setDeleteData, setModalData } = useContext(DataContext);
+  const { setDeleteData } = useContext(DataContext);
 
   return (
     <li className="list-group-item">
@@ -21,7 +21,7 @@ function Line({ animal }) {
           <button  type="button" className="btn btn-outline-success">
             Redaguoti
           </button>
-          <button  type="button" className="btn btn-outline-danger">
+          <button onClick={() => setDeleteData(animal)}  type="button" className="btn btn-outline-danger">
             Ištrinti
           </button>
         </div>

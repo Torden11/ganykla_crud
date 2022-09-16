@@ -13,6 +13,10 @@ function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now())
   const [animals, setAnimals] = useState(null);
   const [createData, setCreateData] = useState(null);
+  const [deleteData, setDeleteData] = useState(null);
+  // const [modalData, setModalData] = useState(null);
+  // const [editData, setEditData] = useState(null);
+  // const [msgs, setMsgs] = useState([]);
 
 //READ
 useEffect(() => {
@@ -29,10 +33,20 @@ useEffect(() => {
     setLastUpdate(Date.now())
   }, [createData])
 
+  //DELETE
+  useEffect(() => {
+    if (null === deleteData) {
+      return;
+    }
+    destroy(key, deleteData.id);
+    setLastUpdate(Date.now())
+  }, [deleteData])
+
   return (
     <DataContext.Provider value={{
       setCreateData,
-      animals
+      animals,
+      setDeleteData
     }}>
     <div className="container">
       <div className="row">

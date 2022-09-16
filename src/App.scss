@@ -4,6 +4,28 @@ body,
 html {
   font-family: "Arima", cursive;
   background-color: lightgreen;
+  font-weight: 600;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card-header {
+  background-color: rgb(251, 255, 0);
+}
+
+.card-body {
+  background-color: rgba(255, 217, 0, 0.61);
+}
+
+
+.col-5:hover {
+  box-shadow: 10px 10px 25px 0px #3c3c3c;
+}
+
+.col-6:hover {
+  box-shadow: 10px 10px 25px 0px #3c3c3c;
 }
 
 .animal {
@@ -20,7 +42,7 @@ html {
     }
     &_weight {
       font-size: 20px;
-      color: rgb(22, 224, 49);
+      color: rgb(52, 197, 71);
       margin-right: 10px;
     }
   }
@@ -28,11 +50,20 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
     button {
       margin-left: 5px;
+      border: 1.5px solid black;
     }
   }
 }
+
+.card-body button {
+  border: 1.5px solid black;
+  background-color: white;
+  font-weight: 800;
+}
+
 
 
 .modal {
