@@ -83,10 +83,10 @@ function Edit() {
               type="button"
               className="btn btn-secondary"
             >
-              Close
+              Uždaryti
             </button>
             <button onClick={save} type="button" className="btn btn-primary">
-              Save changes
+              Išsaugoti pakeitimus
             </button>
           </div>
         </div>

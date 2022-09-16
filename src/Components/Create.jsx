@@ -21,6 +21,15 @@ function Create() {
       setWeight('');
    }
 
+    const doWeight = e => {
+    let y = parseInt(e.target.value);
+    if (isNaN(y)) {
+        setWeight('');
+    } else {
+        setWeight(Math.min(y, 400));
+    }
+  }
+
  
 
   return (
@@ -41,7 +50,7 @@ function Create() {
           </div>
           <div className="mb-3">
             <label className="form-label">Įrašykite svorį (kg)</label>
-            <input type="text" className="form-control" value={weight} onChange={e => setWeight(e.target.value)}/>
+            <input type="text" className="form-control" value={weight} onChange={doWeight}/>
           </div>
           <button  type="button" onClick={add} className="btn btn-outline-success">Pridėti</button>
         </div>
