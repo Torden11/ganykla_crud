@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import DataContext from './Components/DataContext';
 import {create, read, update, destroy} from './Functions/localStorage';
 import List from './Components/List';
+import Edit from './Components/Edit';
 
 const key = 'animals'
 
@@ -14,8 +15,8 @@ function App() {
   const [animals, setAnimals] = useState(null);
   const [createData, setCreateData] = useState(null);
   const [deleteData, setDeleteData] = useState(null);
-  // const [modalData, setModalData] = useState(null);
-  // const [editData, setEditData] = useState(null);
+  const [modalData, setModalData] = useState(null);
+  const [editData, setEditData] = useState(null);
   // const [msgs, setMsgs] = useState([]);
 
 //READ
@@ -42,11 +43,23 @@ useEffect(() => {
     setLastUpdate(Date.now())
   }, [deleteData])
 
+  // EDIT (UPDATE)
+  useEffect(() => {
+    if (null === editData) {
+      return;
+    }
+    update(key, editData, editData.id);
+    setLastUpdate(Date.now())
+  }, [editData]);
+
   return (
     <DataContext.Provider value={{
       setCreateData,
       animals,
-      setDeleteData
+      setDeleteData,
+      modalData,
+      setModalData,
+      setEditData
     }}>
     <div className="container">
       <div className="row">
@@ -58,6 +71,7 @@ useEffect(() => {
         </div>
       </div>
     </div>
+    <Edit></Edit>
     </DataContext.Provider>
   );
 }

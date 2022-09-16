@@ -6,7 +6,7 @@ import DataContext from "./DataContext";
 
 function Line({ animal }) {
 
-  const { setDeleteData } = useContext(DataContext);
+  const { setDeleteData, setModalData } = useContext(DataContext);
 
   return (
     <li className="list-group-item">
@@ -18,7 +18,7 @@ function Line({ animal }) {
           <div className="animal_content_weight">{animal.weight + " kg"}</div>
         </div>
         <div className="animal_buttons">
-          <button  type="button" className="btn btn-outline-success">
+          <button  onClick={() => setModalData(animal)} type="button" className="btn btn-outline-success">
             Redaguoti
           </button>
           <button onClick={() => setDeleteData(animal)}  type="button" className="btn btn-outline-danger">
